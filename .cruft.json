@@ -1,0 +1,26 @@
+{
+  "template": "https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin",
+  "commit": "dbf41935075d9057d69478db6eb9e7901bb44992",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Astou thiam",
+      "email": "astou.thiam@cemes.fr",
+      "github_username": "thiamAMU",
+      "plugin_name": "pymodaq",
+      "module_name": "pymodaq",
+      "short_description": "Nomad plugin for PyMoDAQ",
+      "version": "0.1.0",
+      "license": "MIT",
+      "include_schema_package": true,
+      "include_normalizer": true,
+      "include_parser": true,
+      "include_app": true,
+      "_copy_without_render": [
+        "*.html"
+      ],
+      "_template": "https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin"
+    }
+  },
+  "directory": null
+}
