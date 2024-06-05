@@ -112,5 +112,4 @@ myparser = "nomad_pymodaq.parsers:myparser"
 mypackage = "nomad_pymodaq.schema_packages:mypackage"
 mynormalizer = "nomad_pymodaq.normalizers:mynormalizer"
 myapp = "nomad_pymodaq.apps:myapp"
-
-sintering = "nomad_sintering.schema_packages:sintering"
+sintering = "nomad_pymodaq.schema_packages:sintering"

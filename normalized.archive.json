@@ -1,0 +1,272 @@
+{
+  "data": {
+    "m_def": "nomad_pymodaq.schema_packages.sintering.Sintering",
+    "name": "test sintering",
+    "datetime": "2024-06-04T17:06:12.958164+00:00",
+    "data_file": "sintering_example.csv",
+    "steps": [
+      {
+        "name": "heating",
+        "duration": 1800.0,
+        "initial_temperature": 25.0,
+        "final_temperature": 300.0
+      },
+      {
+        "name": "hold",
+        "duration": 3600.0,
+        "initial_temperature": 300.0,
+        "final_temperature": 300.0
+      },
+      {
+        "name": "cooling",
+        "duration": 1800.0,
+        "initial_temperature": 300.0,
+        "final_temperature": 25.0
+      }
+    ]
+  },
+  "workflow2": {
+    "name": "test sintering"
+  },
+  "metadata": {
+    "entry_name": "test_sintering.archive.yaml",
+    "entry_type": "Sintering",
+    "mainfile": "/home/asthiam/pymodaq_nomad_plugin/tests/data/test_sintering.archive.yaml",
+    "text_search_contents": [
+      "sintering_example.csv",
+      "test sintering",
+      "cooling",
+      "hold",
+      "heating"
+    ],
+    "n_quantities": 31,
+    "quantities": [
+      "",
+      "data",
+      "data.data_file",
+      "data.datetime",
+      "data.name",
+      "data.steps",
+      "data.steps.duration",
+      "data.steps.final_temperature",
+      "data.steps.initial_temperature",
+      "data.steps.name",
+      "metadata",
+      "metadata.entry_name",
+      "metadata.entry_type",
+      "metadata.mainfile",
+      "metadata.quantities",
+      "metadata.section_defs",
+      "metadata.section_defs.definition_id",
+      "metadata.section_defs.definition_qualified_name",
+      "metadata.section_defs.used_directly",
+      "metadata.sections",
+      "results",
+      "results.eln",
+      "results.eln.methods",
+      "results.eln.names",
+      "results.eln.sections",
+      "results.properties",
+      "workflow2",
+      "workflow2.name"
+    ],
+    "sections": [
+      "nomad.datamodel.datamodel.EntryArchive",
+      "nomad.datamodel.datamodel.EntryMetadata",
+      "nomad.datamodel.metainfo.workflow.Workflow",
+      "nomad.datamodel.results.ELN",
+      "nomad.datamodel.results.Properties",
+      "nomad.datamodel.results.Results",
+      "nomad_pymodaq.schema_packages.sintering.Sintering",
+      "nomad_pymodaq.schema_packages.sintering.TemperatureRamp"
+    ],
+    "section_defs": [
+      {
+        "definition_qualified_name": "nomad.datamodel.data.ArchiveSection",
+        "definition_id": "7047cbff9980abff17cce4b1b6b0d1c783505b7f",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.data.EntryData",
+        "definition_id": "538f52fd8d52b29372066f878319c6aeb03b74d2",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.datamodel.EntryArchive",
+        "definition_id": "4f8220ef0081f34a08e0cb211ca52e2ee7cc4d1b",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.datamodel.EntryMetadata",
+        "definition_id": "08e24de48352035bcc932ed9934875ed9b10188e",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.Activity",
+        "definition_id": "fc2735d177bf36f9718ca66a764a56fc0c6200a0",
+        "used_directly": false
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.ActivityStep",
+        "definition_id": "2f62e333291c2fff9f21da567b0dd2d1744c4c10",
+        "used_directly": false
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.BaseSection",
+        "definition_id": "add2edfa25a61ff3bbfdebacc870181f64f41634",
+        "used_directly": false
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.Process",
+        "definition_id": "8d81e1f95c60f39a6a8c9f954143a55e6f4c984c",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.ProcessStep",
+        "definition_id": "ddcf78ce0f6cbae40c970c9c0d0ae33b6a6b9389",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.workflow.Task",
+        "definition_id": "ac62fdff74f54fd477531446ca111c0dd9df6ba2",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.workflow.Workflow",
+        "definition_id": "fc65ae24157492e422afe61173a71403fc5e1fd7",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.results.ELN",
+        "definition_id": "eeed330bd18d40f3a2a00cc35ba6f58808d0c543",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.results.Properties",
+        "definition_id": "f6d62b2664a0c37e0c82d4cb570e5e177e445e05",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.results.Results",
+        "definition_id": "d77c26594ec0501fb0de8daaa4d7b25d54b9e0cf",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition_id": "13f9bb3ac1b822a6c84404ecc6e4a40e8536c87c",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad_pymodaq.schema_packages.sintering.TemperatureRamp",
+        "definition_id": "b80e4839c17d77c778be78dc3fdbe3b37f0e0290",
+        "used_directly": true
+      }
+    ],
+    "search_quantities": [
+      {
+        "id": "data.data_file#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad_pymodaq.schema_packages.sintering.Sintering.data_file",
+        "path_archive": "data.data_file",
+        "str_value": "sintering_example.csv"
+      },
+      {
+        "id": "data.steps.name#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad.datamodel.metainfo.basesections.ActivityStep.name",
+        "path_archive": "data.steps.0.name",
+        "str_value": "heating"
+      },
+      {
+        "id": "data.steps.duration#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad.datamodel.metainfo.basesections.ProcessStep.duration",
+        "path_archive": "data.steps.0.duration",
+        "float_value": 1800.0
+      },
+      {
+        "id": "data.steps.initial_temperature#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad_pymodaq.schema_packages.sintering.TemperatureRamp.initial_temperature",
+        "path_archive": "data.steps.0.initial_temperature",
+        "float_value": 25.0
+      },
+      {
+        "id": "data.steps.final_temperature#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad_pymodaq.schema_packages.sintering.TemperatureRamp.final_temperature",
+        "path_archive": "data.steps.0.final_temperature",
+        "float_value": 300.0
+      },
+      {
+        "id": "data.steps.name#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad.datamodel.metainfo.basesections.ActivityStep.name",
+        "path_archive": "data.steps.1.name",
+        "str_value": "hold"
+      },
+      {
+        "id": "data.steps.duration#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad.datamodel.metainfo.basesections.ProcessStep.duration",
+        "path_archive": "data.steps.1.duration",
+        "float_value": 3600.0
+      },
+      {
+        "id": "data.steps.initial_temperature#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad_pymodaq.schema_packages.sintering.TemperatureRamp.initial_temperature",
+        "path_archive": "data.steps.1.initial_temperature",
+        "float_value": 300.0
+      },
+      {
+        "id": "data.steps.final_temperature#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad_pymodaq.schema_packages.sintering.TemperatureRamp.final_temperature",
+        "path_archive": "data.steps.1.final_temperature",
+        "float_value": 300.0
+      },
+      {
+        "id": "data.steps.name#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad.datamodel.metainfo.basesections.ActivityStep.name",
+        "path_archive": "data.steps.2.name",
+        "str_value": "cooling"
+      },
+      {
+        "id": "data.steps.duration#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad.datamodel.metainfo.basesections.ProcessStep.duration",
+        "path_archive": "data.steps.2.duration",
+        "float_value": 1800.0
+      },
+      {
+        "id": "data.steps.initial_temperature#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad_pymodaq.schema_packages.sintering.TemperatureRamp.initial_temperature",
+        "path_archive": "data.steps.2.initial_temperature",
+        "float_value": 300.0
+      },
+      {
+        "id": "data.steps.final_temperature#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad_pymodaq.schema_packages.sintering.TemperatureRamp.final_temperature",
+        "path_archive": "data.steps.2.final_temperature",
+        "float_value": 25.0
+      },
+      {
+        "id": "data.name#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad.datamodel.metainfo.basesections.BaseSection.name",
+        "path_archive": "data.name",
+        "str_value": "test sintering"
+      },
+      {
+        "id": "data.datetime#nomad_pymodaq.schema_packages.sintering.Sintering",
+        "definition": "nomad.datamodel.metainfo.basesections.Activity.datetime",
+        "path_archive": "data.datetime",
+        "datetime_value": "2024-06-04T17:06:12.958164+00:00"
+      }
+    ]
+  },
+  "results": {
+    "properties": {},
+    "eln": {
+      "sections": [
+        "Sintering"
+      ],
+      "names": [
+        "test sintering"
+      ],
+      "methods": [
+        "Sintering"
+      ]
+    }
+  }
+}

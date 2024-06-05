@@ -111,7 +111,7 @@ class Sintering(Process, EntryData, ArchiveSection):
         },
     )
 
-    def normalize(self, archive, logger: BoundLogger) -> None:
+    def normalize(self, archive, logger) -> None:
         '''
         The normalizer for the `Sintering` class.
 
@@ -128,11 +128,9 @@ class Sintering(Process, EntryData, ArchiveSection):
           for i, row in df.iterrows():
             step = TemperatureRamp()
             step.name = row['step name']
-            step.duration = ureg.Quantity(float(row['duration [min]']), 'min')
+            step.duration = ureg.Quantity(float(row['duration [min]']), 'minute')
             step.initial_temperature = ureg.Quantity(row['initial temperature [C]'], 'celsius')
             step.final_temperature = ureg.Quantity(row['final temperature [C]'], 'celsius')
             steps.append(step)
         self.steps = steps
-
-m_package.__init_metainfo__()
 
