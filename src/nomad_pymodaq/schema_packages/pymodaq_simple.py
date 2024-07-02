@@ -1,5 +1,8 @@
 # pymodaq_simple.py
+import datetime
+
 import pandas as pd
+import csv
 # Copyright The NOMAD Authors.
 #
 # This file is part of NOMAD. See https://nomad-lab.eu for further info.
@@ -39,7 +42,7 @@ if TYPE_CHECKING:
 m_package = Package(name='pymodaq_simple')
 
 
-class Pymodaq_Simple_Result(MeasurementResult, ActivityResult):
+class PymodaqSimpleResult(MeasurementResult, ActivityResult):
     '''
     Class representing the result of a simple measurement in PyMoDAQ.
     '''
@@ -47,11 +50,17 @@ class Pymodaq_Simple_Result(MeasurementResult, ActivityResult):
         a_eln={
             "properties": {
                 "order": [
+                    "name",
                     "intensity",
                     "time"
                 ]
             }
         }
+    )
+
+    name = Quantity(
+        type=str,
+        description='Channel Name'
     )
 
     intensity = Quantity(
@@ -76,13 +85,13 @@ class Pymodaq_Simple_Result(MeasurementResult, ActivityResult):
             archive (EntryArchive): The archive containing the section that is being normalized.
             logger (BoundLogger): A structlog logger.
         '''
-        super(Pymodaq_Simple_Result, self).normalize(archive, logger)
+        super().normalize(archive, logger)
         if len(self.intensity) != len(self.time):
             logger.warning("Intensity and time arrays have different lengths.")
         # Additional normalization steps can be added here.
 
 
-class Pymodaq_Simple_Measurement(Measurement, Activity, BaseSection):
+class PymodaqSimpleMeasurement(Measurement, Activity, BaseSection):
     '''
     Class representing a simple measurement in PyMoDAQ.
     '''
@@ -91,8 +100,6 @@ class Pymodaq_Simple_Measurement(Measurement, Activity, BaseSection):
             "properties": {
                 "order": [
                     "name",
-                    "instruments",
-                    "samples",
                     "results"
                 ]
             }
@@ -101,23 +108,19 @@ class Pymodaq_Simple_Measurement(Measurement, Activity, BaseSection):
 
     name = Quantity(
         type=str,
-        description='Name of the measurement.'
-    )
-
-    instruments = Quantity(
-        type=str,
-        description='Instruments used in the measurement.'
-    )
-
-    samples = Quantity(
-        type=str,
-        description='Samples used in the measurement.'
+        description='Author name.'
     )
 
     results = SubSection(
-        section_def=Pymodaq_Simple_Result,
+        section_def=PymodaqSimpleResult,
         repeats=True,
-        description='Results of the measurement.'
+    )
+    data_file = Quantity(
+        type=str,
+        description='File name of raw data',
+        a_eln={
+            "component": "FileEditQuantity",
+        },
     )
 
     def normalize(self, archive: 'EntryArchive', logger: 'BoundLogger') -> None:
@@ -128,25 +131,26 @@ class Pymodaq_Simple_Measurement(Measurement, Activity, BaseSection):
             archive (EntryArchive): The archive containing the section that is being normalized.
             logger (BoundLogger): A structlog logger.
         '''
-        super(Pymodaq_Simple_Measurement, self).normalize(archive, logger)
-        if self.name:
-            logger.info(f"Measurement name: {self.name}")
-        else:
-            logger.warning("Measurement name is missing.")
 
-        if self.instruments:
-            logger.info(f"Instruments used: {self.instruments}")
-        else:
-            logger.warning("Instruments are not specified.")
+        super().normalize(archive, logger)
+        results = []
+        if self.data_file:
+            with archive.m_context.raw_file(self.data_file) as file:
+                reader = csv.reader(file, delimiter=',')
 
-        if self.samples:
-            logger.info(f"Samples used: {self.samples}")
-        else:
-            logger.warning("Samples are not specified.")
+                name, date = next(reader)
+                #print(name, date)
+                self.name = name
+                self.datetime = datetime.datetime.strptime(date, '%d/%m/%Y')
 
-        if self.results:
-            logger.info(f"Number of results: {len(self.results)}")
-            for result in self.results:
-                result.normalize(archive, logger)
-        else:
-            logger.warning("No results found in the measurement.")
+                try:
+                    while True:
+                        result = PymodaqSimpleResult()
+                        result.name = next(reader)[0]
+                        logger.info(result.name)
+                        result.intensity = np.array(next(reader), dtype=np.float64)
+                        result.time = np.array(next(reader), dtype=np.float64)
+                        results.append(result)
+                except StopIteration:
+                    pass
+        self.results = results

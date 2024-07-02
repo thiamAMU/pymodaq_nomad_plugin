@@ -1,0 +1,189 @@
+{
+  "data": {
+    "m_def": "nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleMeasurement",
+    "name": "Sebastien",
+    "datetime": "2024-05-23T00:00:00+00:00",
+    "data_file": "pymodaq_simple.csv",
+    "results": [
+      {
+        "name": "CH1",
+        "intensity": [
+          11.0,
+          12.5
+        ],
+        "time": [
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "name": "CH2",
+        "intensity": [
+          1.0,
+          2.5
+        ],
+        "time": [
+          10.0,
+          11.0
+        ]
+      }
+    ]
+  },
+  "workflow2": {},
+  "metadata": {
+    "entry_name": "test_pymodaq_simple.archive.yaml",
+    "mainfile": "/home/asthiam/pymodaq_nomad_plugin/tests/data/test_pymodaq_simple.archive.yaml",
+    "text_search_contents": [
+      "pymodaq_simple.csv",
+      "Sebastien",
+      "CH1",
+      "CH2"
+    ],
+    "n_quantities": 21,
+    "quantities": [
+      "",
+      "data",
+      "data.data_file",
+      "data.datetime",
+      "data.name",
+      "data.results",
+      "data.results.intensity",
+      "data.results.name",
+      "data.results.time",
+      "metadata",
+      "metadata.entry_name",
+      "metadata.mainfile",
+      "metadata.quantities",
+      "metadata.section_defs",
+      "metadata.section_defs.definition_id",
+      "metadata.section_defs.definition_qualified_name",
+      "metadata.section_defs.used_directly",
+      "metadata.sections",
+      "results",
+      "results.eln",
+      "results.eln.methods",
+      "results.eln.sections",
+      "results.properties",
+      "workflow2"
+    ],
+    "sections": [
+      "nomad.datamodel.datamodel.EntryArchive",
+      "nomad.datamodel.datamodel.EntryMetadata",
+      "nomad.datamodel.results.ELN",
+      "nomad.datamodel.results.Properties",
+      "nomad.datamodel.results.Results",
+      "nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleMeasurement",
+      "nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleResult"
+    ],
+    "section_defs": [
+      {
+        "definition_qualified_name": "nomad.datamodel.data.ArchiveSection",
+        "definition_id": "7047cbff9980abff17cce4b1b6b0d1c783505b7f",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.datamodel.EntryArchive",
+        "definition_id": "4f8220ef0081f34a08e0cb211ca52e2ee7cc4d1b",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.datamodel.EntryMetadata",
+        "definition_id": "08e24de48352035bcc932ed9934875ed9b10188e",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.Activity",
+        "definition_id": "fc2735d177bf36f9718ca66a764a56fc0c6200a0",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.ActivityResult",
+        "definition_id": "7a45b4ea57a5d815e77298f59597f9d85fb93499",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.BaseSection",
+        "definition_id": "add2edfa25a61ff3bbfdebacc870181f64f41634",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.Measurement",
+        "definition_id": "92a193e908065fa4ff809fb88e83e3057876be33",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.metainfo.basesections.MeasurementResult",
+        "definition_id": "b41fee755770982d78a427f10debb30fea469269",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.results.ELN",
+        "definition_id": "eeed330bd18d40f3a2a00cc35ba6f58808d0c543",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.results.Properties",
+        "definition_id": "f6d62b2664a0c37e0c82d4cb570e5e177e445e05",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad.datamodel.results.Results",
+        "definition_id": "d77c26594ec0501fb0de8daaa4d7b25d54b9e0cf",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleMeasurement",
+        "definition_id": "807e6a74c08a703ad27d47e9d53bb623c5dccbd2",
+        "used_directly": true
+      },
+      {
+        "definition_qualified_name": "nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleResult",
+        "definition_id": "d6617c7e36bbde151cb39a01ac1b8366cbe724d0",
+        "used_directly": true
+      }
+    ],
+    "search_quantities": [
+      {
+        "id": "data.data_file#nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleMeasurement",
+        "definition": "nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleMeasurement.data_file",
+        "path_archive": "data.data_file",
+        "str_value": "pymodaq_simple.csv"
+      },
+      {
+        "id": "data.results.name#nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleMeasurement",
+        "definition": "nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleResult.name",
+        "path_archive": "data.results.0.name",
+        "str_value": "CH1"
+      },
+      {
+        "id": "data.results.name#nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleMeasurement",
+        "definition": "nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleResult.name",
+        "path_archive": "data.results.1.name",
+        "str_value": "CH2"
+      },
+      {
+        "id": "data.datetime#nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleMeasurement",
+        "definition": "nomad.datamodel.metainfo.basesections.BaseSection.datetime",
+        "path_archive": "data.datetime",
+        "datetime_value": "2024-05-23T00:00:00+00:00"
+      },
+      {
+        "id": "data.name#nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleMeasurement",
+        "definition": "nomad_pymodaq.schema_packages.pymodaq_simple.PymodaqSimpleMeasurement.name",
+        "path_archive": "data.name",
+        "str_value": "Sebastien"
+      }
+    ]
+  },
+  "results": {
+    "properties": {},
+    "eln": {
+      "sections": [
+        "PymodaqSimpleMeasurement"
+      ],
+      "methods": [
+        "PymodaqSimpleMeasurement"
+      ]
+    }
+  }
+}
