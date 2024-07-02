@@ -1,0 +1,22 @@
+definitions:
+    sections:
+        Vector:
+            quantities:
+                label:
+                    type: str
+                data:
+                    type: np.float64
+                    shape: ['*']
+                    unit: volt
+        Channels:
+            quantities:
+                title:
+                    type: str
+                name:
+                    type: str
+                date:
+                    type: Datetime
+            sub_sections:
+                channels:
+                    section: Vector
+                    repeats: true

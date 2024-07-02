@@ -6,5 +6,8 @@
     </content>
     <orderEntry type="jdk" jdkName="nomad" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="pymodaq_nomad_distribution" />
+    <orderEntry type="module" module-name="nomad-oasis" />
+    <orderEntry type="module" module-name="nomad-oasis-with-keycloak" />
   </component>
 </module>

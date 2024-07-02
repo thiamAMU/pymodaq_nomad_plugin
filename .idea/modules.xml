@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../nomad-oasis/.idea/nomad-oasis.iml" filepath="$PROJECT_DIR$/../nomad-oasis/.idea/nomad-oasis.iml" />
+      <module fileurl="file:///opt/nomad-oasis-with-keycloak/.idea/nomad-oasis-with-keycloak.iml" filepath="/opt/nomad-oasis-with-keycloak/.idea/nomad-oasis-with-keycloak.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pymodaq_nomad_distribution/.idea/pymodaq_nomad_distribution.iml" filepath="$PROJECT_DIR$/../pymodaq_nomad_distribution/.idea/pymodaq_nomad_distribution.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pymodaq_nomad_plugin.iml" filepath="$PROJECT_DIR$/.idea/pymodaq_nomad_plugin.iml" />
     </modules>
   </component>

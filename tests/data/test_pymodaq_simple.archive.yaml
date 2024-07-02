@@ -1,0 +1,3 @@
+data:
+  m_def: nomad_pymodaq.schema_packages.pymodaq_simple.Pymodaq_simple
+  data_file: pymodaq_simple.csv
