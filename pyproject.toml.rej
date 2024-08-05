@@ -1,0 +1,8 @@
+diff a/pyproject.toml b/pyproject.toml	(rejected hunks)
+@@ -112,3 +112,6 @@ myparser = "nomad_pymodaq.parsers:myparser"
+ mypackage = "nomad_pymodaq.schema_packages:mypackage"
+ mynormalizer = "nomad_pymodaq.normalizers:mynormalizer"
+ myapp = "nomad_pymodaq.apps:myapp"
++[tool.cruft]
++# Avoid updating workflow files, this leads to permissions issues
++skip = [".github/*"]
