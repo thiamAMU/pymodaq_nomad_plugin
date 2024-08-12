@@ -16,7 +16,7 @@ classifiers = [
 name = "nomad-pymodaq"
 description = "Nomad plugin for PyMoDAQ"
 version = "0.1.0"
-readme = "README.rst"
+readme = "README.md"
 requires-python = ">=3.9"
 authors = [
     { name = "Astou thiam", email = "astou.thiam@cemes.fr" },
@@ -25,7 +25,7 @@ maintainers = [
     { name = "Astou thiam", email = "astou.thiam@cemes.fr" },
 ]
 license = { file = "LICENSE" }
-dependencies = ["nomad-lab>=1.2.2dev578"]
+dependencies = ["nomad-lab>=1.3.0"]
 
 [project.urls]
 Repository = "https://github.com/thiamAMU/nomad-pymodaq"
